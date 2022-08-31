@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 // controllers
 const demo = require("./controller/api/demo");
 
+
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 //routes
 app.use("/api/demo", demo);
 
