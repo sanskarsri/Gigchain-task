@@ -4,7 +4,11 @@ const router = require("express").Router();
 const DEMO__MODEL = require("../../models/Demo");
 
 router.get("/",(req,res)=>{
-    res.send("Demo working");
+    try {
+        res.send("Demo working");
+    } catch (err) {
+        console.log(err);
+    }
 })
 
 module.exports = router;
