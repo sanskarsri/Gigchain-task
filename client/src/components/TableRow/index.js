@@ -3,7 +3,8 @@ import "./tablerow.css";
 function Tablerow() {
   return (
     <>
-      <table className="table table-bordered mt-5">
+    <div className="table-container mt-5">
+      <table className="table table-bordered">
         <thead>
           <tr>
             <th scope="col">Invoice ID</th>
@@ -33,6 +34,7 @@ function Tablerow() {
           </tr>
         </tbody>
       </table>
+      </div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import "./barchart.css";
 
 
@@ -51,10 +51,8 @@ const data = [
 function Barchart() {
 
     const [width, setWidth]   = useState(window.innerWidth);
-const [height, setHeight] = useState(window.innerHeight);
 const updateDimensions = () => {
     setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
 }
 useEffect(() => {
     window.addEventListener("resize", updateDimensions);
@@ -62,14 +60,13 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  console.log(width,height)
+  console.log(width)
 }, [width]);
 
   return (
     <>
-    <div >
-    {/* 
-      <ResponsiveContainer width="100%" height="auto"> */}
+    <div className="chart-container mt-5">
+        <h3 className="tablehead">Timeseries Trend of Gigs completed</h3>
         <BarChart
           width={width*0.6}
           height={400}
@@ -89,7 +86,6 @@ useEffect(() => {
           <Bar dataKey="pv" fill="#8884d8" />
           <Bar dataKey="uv" fill="#82ca9d" />
         </BarChart>
-      {/* </ResponsiveContainer>*/}
       </div>
     </>
   );

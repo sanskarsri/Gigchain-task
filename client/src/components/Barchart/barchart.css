@@ -1,0 +1,16 @@
+.chart-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 40px 0px;
+    border: 1px solid #000;
+    flex-direction: column;
+}
+.tablehead{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    background: lawngreen;
+    margin-bottom: 30px;
+    padding: 10px;
+}

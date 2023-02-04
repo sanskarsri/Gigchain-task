@@ -5,3 +5,16 @@
     border: 1px solid #000 !important;
     text-align: center;
 }
+.table-container{
+    width: 100%;
+    overflow-x: scroll;
+}
+.table-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge add Firefox */
+  .table-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
