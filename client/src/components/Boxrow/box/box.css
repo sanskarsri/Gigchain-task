@@ -1,0 +1,12 @@
+.box{
+    min-height: 125px;
+    width: 125px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    flex-direction: column;
+    background: yellow;
+    border: 2px solid #000;
+}

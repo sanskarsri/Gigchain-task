@@ -1,0 +1,7 @@
+.table-bordered thead th {
+    text-align: center;
+}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #000 !important;
+    text-align: center;
+}
