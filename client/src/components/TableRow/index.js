@@ -1,6 +1,14 @@
+import React, {useContext} from "react";
 import "./tablerow.css";
+import DataContext from "../Datacontext";
+import moment from 'moment'
 
 function Tablerow() {
+
+  const details = useContext(DataContext);
+
+  console.log(details);
+
   return (
     <>
     <div className="table-container mt-5">
@@ -20,18 +28,20 @@ function Tablerow() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          {details && details.map((entry,i)=>
+          <tr key={i}>
+            <td>{entry._id}</td>
+            <td>{entry.gigtype}</td>
+            <td>{entry.gignumber}</td>
+            <td>{entry.amount}</td>
+            <td>{moment(entry.start).format('MMM Do')}</td>
+            <td>{moment(entry.end).format('MMM Do')}</td>
+            <td>{entry.status.toUpperCase()}</td>
+            <td>{entry.percentage} %</td>
+            <td>{entry.contactcsm}</td>
+            <td><a href={entry.proof} target="_blank" >Link</a></td>
           </tr>
+          )}
         </tbody>
       </table>
       </div>

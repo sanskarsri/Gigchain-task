@@ -1,11 +1,11 @@
 import './box.css';
 
-function Box(){
+function Box({value,title}){
     return (
         <>
             <div className="box">
-                <span>00</span>
-                <span>xyz</span>
+                <span>{value}</span>
+                <span>{title}</span>
             </div>
         </>
     );
